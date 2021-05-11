@@ -1,4 +1,5 @@
 const container = document.getElementById("container");
+let input = 10;
 
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows);
@@ -24,4 +25,30 @@ function paint(e) {
   e.target.style.backgroundColor= chooseColor;
 }
 
-makeRows(10, 10);
+function inputUser() {
+  resetGrid();
+  let input = document.getElementById("userInput").value;
+  makeRows(input, input);
+}
+
+function resetGrid() {
+  document
+    .querySelectorAll(".grid-item")
+    .forEach((e) => e.parentNode.removeChild(e));
+}
+
+function reset() {
+  document
+    .querySelectorAll(".grid-item")
+    .forEach((e) => e.parentNode.removeChild(e));
+
+  if (input === 10) {
+    makeRows(input, input);
+  }
+  else{
+    let input =  document.getElementById("userInput").value;
+    makeRows(input, input);
+  }
+}
+
+makeRows(input, input);
