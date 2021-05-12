@@ -13,18 +13,17 @@ function makeRows(rows, cols) {
   };
 };
 
-function getRandomColor(){
+function getRandomColor() {
   let letters = '0123456789ABCDEF';
-  let color = '#';
+  chooseColor = '#';
   for (var i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
+    chooseColor += letters[Math.floor(Math.random() * 16)];
+  }
 }
 
 function paint(e) {
-  if (actualColor === "rainbow") {
-    chooseColor = getRandomColor();
+  if (actualColor === "rainbow"){
+    getRandomColor();
     e.target.style.backgroundColor= chooseColor;
   }
   if (actualColor === "blue"){
@@ -74,13 +73,13 @@ function rainbowTrue() {
 }
 
 function blackTrue() {
-   reset();
-   actualColor = "black";
+  reset();
+  actualColor = "black";
 }
 
 function blueTrue() {
-   reset();
-   actualColor = "blue";
+  reset();
+  actualColor = "blue";
 }
 
 makeRows(input, input);
