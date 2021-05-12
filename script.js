@@ -27,7 +27,7 @@ function paint(e) {
 
 function inputUser() {
   resetGrid();
-  let input = document.getElementById("userInput").value;
+  input = document.getElementById("userInput").value;
   makeRows(input, input);
 }
 
@@ -42,13 +42,14 @@ function reset() {
     .querySelectorAll(".grid-item")
     .forEach((e) => e.parentNode.removeChild(e));
 
+  let input =  document.getElementById("userInput").value;
   if (input === 10) {
-    makeRows(input, input);
+    makeRows(10, 10);
   }
   else{
-    let input =  document.getElementById("userInput").value;
     makeRows(input, input);
   }
 }
 
 makeRows(input, input);
+
