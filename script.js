@@ -1,5 +1,7 @@
 const container = document.getElementById("container");
 let input = 10;
+let chooseColor = "#000000";
+let actualColor = "black";
 
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows);
@@ -21,14 +23,30 @@ function getRandomColor(){
 }
 
 function paint(e) {
-  let chooseColor = getRandomColor();
-  e.target.style.backgroundColor= chooseColor;
+  if (actualColor === "rainbow") {
+    chooseColor = getRandomColor();
+    e.target.style.backgroundColor= chooseColor;
+  if (actualColor === "blue"){
+    alert(actualColor);
+    chooseColor = "#33e5ff";
+    e.target.style.backgroundColor= chooseColor;
+  }
+  } else {
+    chooseColor = "#000000";
+    e.target.style.backgroundColor= chooseColor;
+  }
 }
 
 function inputUser() {
   resetGrid();
   input = document.getElementById("userInput").value;
   makeRows(input, input);
+  // if (0 << document.getElementById("userInput").value << 31){
+  //   makeRows(input, input);
+  // }
+  // else{
+  //   alert("Please enter a smaller number");
+  // }
 }
 
 function resetGrid() {
@@ -50,5 +68,19 @@ function reset() {
   }
 }
 
-makeRows(input, input);
+function rainbowTrue() {
+  reset();
+  actualColor = "rainbow";
+}
 
+function blackTrue() {
+  reset();
+  actualColor = "black";
+}
+
+// function blueTrue() {
+//   reset();
+//   actualColor = "blue";
+// }
+
+makeRows(input, input);
