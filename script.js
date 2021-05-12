@@ -26,12 +26,12 @@ function paint(e) {
   if (actualColor === "rainbow") {
     chooseColor = getRandomColor();
     e.target.style.backgroundColor= chooseColor;
+  }
   if (actualColor === "blue"){
-    alert(actualColor);
-    chooseColor = "#33e5ff";
+    chooseColor = "#5ccdff";
     e.target.style.backgroundColor= chooseColor;
   }
-  } else {
+  else {
     chooseColor = "#000000";
     e.target.style.backgroundColor= chooseColor;
   }
@@ -74,13 +74,13 @@ function rainbowTrue() {
 }
 
 function blackTrue() {
-  reset();
-  actualColor = "black";
+   reset();
+   actualColor = "black";
 }
 
-//  *! function blueTrue() {
-//   reset();
-//   actualColor = "blue";
-// }
+function blueTrue() {
+   reset();
+   actualColor = "blue";
+}
 
 makeRows(input, input);
