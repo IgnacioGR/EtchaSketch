@@ -8,16 +8,20 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <main>
-        <h1 id="title">Use the buttons below to paint</h1>
+    <header>
+        <h1 id="title">Etch a Sketch</h1>
         <form id="form" onsubmit="return false;">
             <input  type="number" id="userInput" placeholder="Enter a number between 1 and 30" />
             <button class="selector"  type="submit" onclick="inputUser();">Send</button>
         </form>
-        <button class="selector" id="reset" type="submit" onclick="reset();">Reset</button>
-        <button class="selector" id="rainbow" type="submit" onclick="rainbowTrue();">Rainbow</button>
-        <!--*! <button class="selector" id="blue" type="submit" onclick="blueTrue();">Blue</button> -->
-        <button class="selector" id="black" type="submit" onclick="blackTrue();">Black</button>
+        <ul>
+           <li> <button class="selector" id="reset" type="submit" onclick="reset();">Reset</button></li>
+           <li> <button class="selector" id="rainbow" type="submit" onclick="rainbowTrue();">Rainbow</button></li>
+            <!--*! <li><button class="selector" id="blue" type="submit" onclick="blueTrue();">Blue</button></li> -->
+            <li><button class="selector" id="black" type="submit" onclick="blackTrue();">Black</button></li>
+        </ul>
+    </header>
+    <main>
         <div id="container" class="grid">
         </div>
         <script src="script.js"></script>

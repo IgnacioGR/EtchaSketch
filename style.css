@@ -15,7 +15,53 @@
     margin: auto;
     margin-top: 5%;
 }
-  
+ 
+header{
+    width: 100%;
+    height: 150px;
+     position: relative;
+}
+
+ul{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    
+}
+
+h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, -50%);
+}
+
+form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#userInput{
+    width: 220px;
+}
+
 .grid-item {
     border: 1px solid transparent;
+}
+
+ul > li{
+    display: inline-block;
+    margin:0px auto 0px auto;
+    margin-right: 12px;
+}
+
+button{
+    width: 75px;
 }
