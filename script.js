@@ -41,12 +41,12 @@ function inputUser() {
   resetGrid();
   input = document.getElementById("userInput").value;
   makeRows(input, input);
-  // if (0 << document.getElementById("userInput").value << 31){
-  //   makeRows(input, input);
-  // }
-  // else{
-  //   alert("Please enter a smaller number");
-  // }
+  //*! if (0 << document.getElementById("userInput").value << 31){
+  //   *!makeRows(input, input);
+  // *!}
+  // *!else{
+  //  *!alert("Please enter a smaller number");
+  // *!}
 }
 
 function resetGrid() {
@@ -78,7 +78,7 @@ function blackTrue() {
   actualColor = "black";
 }
 
-// function blueTrue() {
+//  *! function blueTrue() {
 //   reset();
 //   actualColor = "blue";
 // }
