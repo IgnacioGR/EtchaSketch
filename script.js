@@ -42,7 +42,6 @@ function reset() {
     .querySelectorAll(".grid-item")
     .forEach((e) => e.parentNode.removeChild(e));
 
-  let input =  document.getElementById("userInput").value;
   if (input === 10) {
     makeRows(10, 10);
   }
