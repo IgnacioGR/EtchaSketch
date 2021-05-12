@@ -1,6 +1,7 @@
 :root {
     --grid-cols: 1;
     --grid-rows: 1;
+    --black: black;
 }
   
 #container {
@@ -12,7 +13,7 @@
     width: 60vh;
     border: 1px solid black;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 5%;
 }
   
 .grid-item {
