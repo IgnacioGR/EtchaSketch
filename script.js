@@ -39,13 +39,19 @@ function paint(e) {
 function inputUser() {
   resetGrid();
   input = document.getElementById("userInput").value;
-  makeRows(input, input);
-  //*! if (0 << document.getElementById("userInput").value << 31){
-  //   *!makeRows(input, input);
-  // *!}
-  // *!else{
-  //  *!alert("Please enter a smaller number");
-  // *!}
+  if (0 < input <= 30){
+    makeRows(input, input);
+  }
+  if( input < 0){
+    alert("Please enter a bigger number");
+    resetGrid();
+    makeRows(10,10);
+  }
+  if( input > 30){
+    alert("Please enter a smaller number");
+    resetGrid();
+    makeRows(10,10);
+  }
 }
 
 function resetGrid() {
