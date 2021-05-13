@@ -30,7 +30,7 @@ function paint(e) {
     chooseColor = "#5ccdff";
     e.target.style.backgroundColor= chooseColor;
   }
-  else {
+  if(actualColor === "black") {
     chooseColor = "#000000";
     e.target.style.backgroundColor= chooseColor;
   }
